@@ -12,27 +12,20 @@
   </div>
 </div>
 </header>
-<div class="row text-center " style="display:flex; flex-wrap: wrap;">
-            <% blogs.forEach(function(blogs){ %>
-                <div class="card m-3 p-0 bg-outline-dark col-sm-12  " >
-  <div class="row no-gutters">
-    <div class="col-md-4">
-      <img src="<%= blogs.coverimage %>" class="card-img row-sm-4  " style="height 
-      : 250px; width: inherit" alt="...">
-    </div>
-    <div class="col-sm-8">
-      <div class="card-body align-middle">
-        <h3 class="card-title align-middle  mb-3"><%= blogs.title %></h3>
+<% blogs.forEach(function(blogs){ %>
+<a href="/blogs/<%= blogs._id %>" style="text-decoration: none;">
+<div class="container mt-3 mb-3 pt-1 pb-1 pl-0 pr-0 text-center" style="background-color:<%= blogs.BackgroundColor %>">
+<div class="container" style="background-image: url(<%= blogs.coverimage %>);padding: 0;height: 500px;width: 99%;background-repeat:no-repeat;background-size: cover;background-position: center;">
+
+<div class="text-center container col-sm-6 align-middle" style="background: inherit;
+background-color: #5b5d61;
+  background-blend-mode: screen;margin-top: 100;
+margin-bottom: 100;">
+  <h1 class="text-light display-2"><%= blogs.title %></h1>
         <p class="card-text">TYPE :<%= blogs.type %></p>
         <p class="card-text"><%= blogs.Description %></p>
         <p class="card-text">By <%= blogs.author %></p>
         <p class="card-text"><small class="text-muted"><%= blogs.date %></small></p>
-        <a href="/blogs/<%= blogs._id %>"><button class="btn btn-primary">Read More</button></a>
-      </div>
-    </div>
-  </div>
-</div>
-            <% }); %>
-   </div>
-</div>
+</div></div>
+</div></a><% }); %>
 <%- include("partials/footer") %>
