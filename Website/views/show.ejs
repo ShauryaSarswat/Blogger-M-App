@@ -1,0 +1,13 @@
+<%- include("partials/header") %>
+<h1>This is the show template</h1>
+
+<p><%= blogs.title %></p>
+
+<img src="<%= blogs.coverimage %>" style=" height: 300px; width: 200px">
+
+<p><%= blogs.Description %></p>
+<p><%= blogs.date %></p>
+<p><%= blogs.author %></p>
+<p><%= blogs.type %></p>
+<p> <%= blogs.content %> </p>
+<%- include("partials/footer") %>

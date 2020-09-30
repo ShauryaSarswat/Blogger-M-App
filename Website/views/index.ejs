@@ -1,0 +1,38 @@
+<%- include("partials/header") %>
+
+<div class="container ">
+<header>
+<div class="jumbotron jumbotron-fluid text-center bg-dark text-light">
+  <div class="container text-center">
+  <div class="container">
+    <h1 class="display-3">Blogs listing Entrepreneurs</h1>
+    <p class="lead">Know every inside out to what it takes becoming an entrepreneur , success stories of some , and trending skill-set required.</p>
+    <div class=" d-none d-md-inline-block" style="float: left"><a href="/blogs/createNew" >
+<button class="btn btn-primary " >Create your own Post</button></a></div>
+  </div>
+</div>
+</header>
+<div class="row text-center " style="display:flex; flex-wrap: wrap;">
+            <% blogs.forEach(function(blogs){ %>
+                <div class="card m-3 p-0 bg-outline-dark col-sm-12  " >
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="<%= blogs.coverimage %>" class="card-img row-sm-4  " style="height 
+      : 250px; width: inherit" alt="...">
+    </div>
+    <div class="col-sm-8">
+      <div class="card-body align-middle">
+        <h3 class="card-title align-middle  mb-3"><%= blogs.title %></h3>
+        <p class="card-text">TYPE :<%= blogs.type %></p>
+        <p class="card-text"><%= blogs.Description %></p>
+        <p class="card-text">By <%= blogs.author %></p>
+        <p class="card-text"><small class="text-muted"><%= blogs.date %></small></p>
+        <a href="/blogs/<%= blogs._id %>"><button class="btn btn-primary">Read More</button></a>
+      </div>
+    </div>
+  </div>
+</div>
+            <% }); %>
+   </div>
+</div>
+<%- include("partials/footer") %>
