@@ -1,13 +1,32 @@
 <%- include("partials/header") %>
-<h1>This is the show template</h1>
+ <nav class="navbar justify-content-center  mb-5">
+    <ul class="nav ">
+  <li class="nav-item">
+   <a class="nav-link" href="/blogs"><i class="arrow alternate circle left icon" style="font-size: 2rem;color: white;"></i><span class="sr-only">(current)</span></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/about"><i class="user circle icon" style="font-size: 2rem;color: steelblue;"></i></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#"><i class="github icon" style="font-size: 2rem;color: purple;"></i></a>
+  </li>
+  
+  <li class="nav-item">
+     <a class="nav-link " href="mailto:shauryasarswatpersonalAC@gmail.com"><i class="envelope icon" style="font-size: 2rem;color: red;"></i></a>
+  </li>
+  <li class="nav-item">
+   <a class="nav-link " href="https://bossinthechair.blogspot.com/"><i class="blogger icon" style="font-size: 2rem;color: orange;"></i></a>
+  </li>
 
-<p><%= blogs.title %></p>
-
-<img src="<%= blogs.coverimage %>" style=" height: 300px; width: 200px">
-
-<p><%= blogs.Description %></p>
-<p><%= blogs.date %></p>
-<p><%= blogs.author %></p>
-<p><%= blogs.type %></p>
-<p> <%- blogs.content %> </p>
-<%- include("partials/footer") %>
+</ul>
+</nav>
+<div class="container bg-light mt-5 mb-5 rounded-lg p-5">
+<p class="text-center display-1 mb-0 pb-0" style="font-family: 'Staatliches', cursive;color: black;"><%= blogs.title %><br>
+<small class=" text-center text-muted m-0 "style="font-size: 3rem;"><%= blogs.author %></small></p>
+<br>
+<img src="<%= blogs.coverimage %>" style=" height: 600px; width: 100%">
+<p style="font-size: 1.7rem;font-weight: 500;font-family: consolas;margin: 50px;"><%= blogs.content %> </p>
+<br>
+<small style="float: right;word-spacing: 5px;">Uploaded On : <%= blogs.date.toDateString() %> TYPE : <%= blogs.type %></small>
+</div>
+<%- include("partials/footer2") %>
