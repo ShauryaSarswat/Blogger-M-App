@@ -1,31 +1,24 @@
 <%- include("partials/header") %>
-
-<div class="container ">
-<header>
-<div class="jumbotron jumbotron-fluid text-center bg-dark text-light">
-  <div class="container text-center">
-  <div class="container">
-    <h1 class="display-3">Blogs listing Entrepreneurs</h1>
-    <p class="lead">Know every inside out to what it takes becoming an entrepreneur , success stories of some , and trending skill-set required.</p>
-    <div class=" d-none d-md-inline-block" style="float: left"><a href="/blogs/createNew" >
-<button class="btn btn-primary " >Create your own Post</button></a></div>
+<div class="jumbotron jumbotron-fluid vertical-center" id="jumbotron">
+  <div class="container  text-center">
+    <h6 class="display-3 text-light" style=";padding-bottom: 20px;font-family: 'Monoton', cursive;letter-spacing: 1rem;"><img src="/images/logo.png"> Blogger M-app</h6>
+    <p class="lead text-light" style="font-size: 1.3rem;">A platform where you can type to inspire the people all over the world !</p>
+    <br>
   </div>
 </div>
-</header>
+<div class="text-center text-light"style="font-size: 28px;font-weight: 800;"><u>HOME</u></div>
+<div class="container mt-5">
 <% blogs.forEach(function(blogs){ %>
-<a href="/blogs/<%= blogs._id %>" style="text-decoration: none;">
-<div class="container mt-3 mb-3 pt-1 pb-1 pl-0 pr-0 text-center" style="background-color:<%= blogs.BackgroundColor %>">
-<div class="container" style="background-image: url(<%= blogs.coverimage %>);padding: 0;height: 500px;width: 99%;background-repeat:no-repeat;background-size: cover;background-position: center;">
-
-<div class="text-center container col-sm-6 align-middle" style="background: inherit;
-background-color: #5b5d61;
-  background-blend-mode: screen;margin-top: 100;
-margin-bottom: 100;">
-  <h1 class="text-light display-2"><%= blogs.title %></h1>
-        <p class="card-text">TYPE :<%= blogs.type %></p>
-        <p class="card-text"><%= blogs.Description %></p>
-        <p class="card-text">By <%= blogs.author %></p>
-        <p class="card-text"><small class="text-muted"><%= blogs.date %></small></p>
-</div></div>
-</div></a><% }); %>
+<div class="card" style="padding: 30px;margin: 30px;">
+  <a href="/blogs/<%= blogs._id %>"><h5 class="card-title" style="font-size: 3rem;font-family: 'Staatliches', cursive;text-decoration: none;color: black;"><%= blogs.title %></h5></a>
+  <span class="text-muted mb-3" style="font-size: 1.25rem;"><%= blogs.date.toDateString() %></span>
+  <img src="<%= blogs.coverimage %>" class="card-img-top" alt="...">
+  <div class="card-body">
+    <div class="text-center">
+    <p class="card-text" style="color : <%= blogs.themeColor %>"><%= blogs.Description %></p>
+    <a href="/blogs/<%= blogs._id %>"><span class="text-center">READ MORE</span></a>
+  </div></div>
+</div>
+<% }); %>
+</div>
 <%- include("partials/footer") %>

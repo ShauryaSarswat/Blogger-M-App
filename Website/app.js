@@ -18,7 +18,7 @@ var blogSchema = new mongoose.Schema({
  Description : String,
  content : String,
  date : Date,
- BackgroundColor : String
+ themeColor : String
 });
 var blog = mongoose.model("blog", blogSchema);
 
@@ -50,7 +50,7 @@ app.post("/blogs", function(req, res){
 	var author = req.body.author;
 	var Description = req.body.Description;
 	var content = req.body.content;
-	var BackgroundColor = req.body.BackgroundColor;
+	var themeColor = req.body.themeColor;
 	var newBlog = { 
 		title : title,
 		type : type,
@@ -59,7 +59,7 @@ app.post("/blogs", function(req, res){
 		author : author,
 		Description : Description,
 		content : content,
-		BackgroundColor : BackgroundColor
+		themeColor : themeColor
 	};
 
 	blog.create(newBlog,function(err, blog){
