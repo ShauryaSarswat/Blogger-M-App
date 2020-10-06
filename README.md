@@ -1,7 +1,7 @@
 # WebsiteTemplate
  This is a simple website template created for blogging
 
-This is a simple blog website for the blogging related to Entrepreneurship.
+This is a simple blog website for gernal purpose blogging.
 
 For using the website source code on local machine install
 (Given Products with recommended choices)
