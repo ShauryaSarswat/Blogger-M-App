@@ -1,24 +1,47 @@
 <%- include("partials/header") %>
-<div class="jumbotron jumbotron-fluid vertical-center" id="jumbotron">
+<div class="jumbotron jumbotron-fluid vertical-center " id="jumbotron">
+
   <div class="container  text-center">
-    <h6 class="display-3 text-light" style=";padding-bottom: 20px;font-family: 'Monoton', cursive;letter-spacing: 1rem;"><img src="/images/logo.png"> Blogger M-app</h6>
+    <h6 class="display-3 text-light" style=";padding-bottom: 20px;font-family: 'Monoton', cursive;letter-spacing: 1rem;"><img src="/images/logo.png"> Blogger M-App</h6>
     <p class="lead text-light" style="font-size: 1.3rem;">A platform where you can type to inspire the people all over the world !</p>
     <br>
+    <p class="display-3 text-light"><u>HOME</u></p>
   </div>
 </div>
-<div class="text-center text-light"style="font-size: 28px;font-weight: 800;"><u>HOME</u></div>
-<div class="container mt-5">
+  <nav class="navbar justify-content-center fixed-top mb-5">
+    <ul class="nav ">
+  <li class="nav-item">
+   <a class="nav-link" href="/"><i class="arrow alternate circle left icon" style="font-size: 2rem;color: white;"></i><span class="sr-only">(current)</span></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/about"><i class="user circle icon" style="font-size: 2rem;color: steelblue;"></i></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#"><i class="github icon" style="font-size: 2rem;color: purple;"></i></a>
+  </li>
+  
+  <li class="nav-item">
+     <a class="nav-link " href="mailto:shauryasarswatpersonalAC@gmail.com"><i class="envelope icon" style="font-size: 2rem;color: red;"></i></a>
+  </li>
+  <li class="nav-item">
+   <a class="nav-link " href="https://bossinthechair.blogspot.com/"><i class="blogger icon" style="font-size: 2rem;color: orange;"></i></a>
+  </li>
+</ul>
+<ul class="nav justify-content-end">
+  <li class="nav-item">
+    <a class="nav-link nav-pills active" href="/blogs/createNew"><i class="pen square icon"style="font-size: 2rem;color: purple;"></i></a>
+  </li>
+</ul></nav>
+<div class="container  ">
 <% blogs.forEach(function(blogs){ %>
-<div class="card" style="padding: 30px;margin: 30px;">
-  <a href="/blogs/<%= blogs._id %>"><h5 class="card-title" style="font-size: 3rem;font-family: 'Staatliches', cursive;text-decoration: none;color: black;"><%= blogs.title %></h5></a>
+<div class="card " style="padding: 30px;margin: 30px;">
+  <a href="/blogs/<%= blogs._id %>"><h5 class="card-title" style="font-size: 3rem;font-family: 'Staatliches', cursive;text-decoration: none;color: black;"><%= blogs.title %></h5>
   <span class="text-muted mb-3" style="font-size: 1.25rem;"><%= blogs.date.toDateString() %></span>
   <img src="<%= blogs.coverimage %>" class="card-img-top" alt="...">
-  <div class="card-body">
-    <div class="text-center">
-    <p class="card-text" style="color : <%= blogs.themeColor %>"><%= blogs.Description %></p>
-    <a href="/blogs/<%= blogs._id %>"><span class="text-center">READ MORE</span></a>
-  </div></div>
-</div>
+  <br>
+<p class="text-muted text-left mt-5"style="font-size: 1.7rem;font-weight: 500;font-family: 'Dancing Script', cursive;"><%= blogs.Description.substring(0,300) %>.................</p>
+<span id="readme"><a href="/blogs/<%= blogs._id %>"><b>READ ME</b></a></span>
+</div></a>
 <% }); %>
 </div>
 <%- include("partials/footer") %>

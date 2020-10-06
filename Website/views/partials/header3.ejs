@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css" integrity="sha512-+AdxWMqfOdtwMuXK482e5OgHYzN06s97n3NTAeAdTlUvlIgCBx3SUKvMculJIedylDfVCaQFdD6HaojI4aeBUA==" crossorigin="anonymous" />
-<link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
     <title>theEntrepreneurshipBlog</title>
     <style>
      #brandLogo{
@@ -38,8 +38,11 @@
      }
      #jumbotron{
       /*background-image: url(https://images.unsplash.com/photo-1541701494587-cb58502866ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);*/
-     background: transparent;
-     height: 500px;
+      background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(https://images.unsplash.com/photo-1541701494587-cb58502866ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+      background-repeat: no-repeat;
+   background-size: cover;margin: 0px;
+   height: 600px;
+   width: 100%;
      }
      .vertical-center {
   min-height: 50%;  /* Fallback for browsers do NOT support vh unit */
@@ -77,12 +80,25 @@
 #readme{
   float: right;
 }
-body{
-  background: linear-gradient( to bottom,rgba(0, 0, 0, 0.0),rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1) ), url(https://images.unsplash.com/photo-1541701494587-cb58502866ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);background-size: 100% 900px;
-      background-repeat: no-repeat;
-   background-color: black;
-}
+
 </style>
   </head>
   <body>
+     <ul class="nav justify-content-center">
+  <li class="nav-item">
+   <a class="nav-link" href="/blogs"><i class="arrow alternate circle left icon" style="font-size: 2rem;color: black;"></i><span class="sr-only">(current)</span></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/about"><i class="user circle icon" style="font-size: 2rem;color: black;"></i></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#"><i class="github icon" style="font-size: 2rem;color: black;"></i></a>
+  </li>
   
+  <li class="nav-item">
+     <a class="nav-link " href="mailto:shauryasarswatpersonalAC@gmail.com"><i class="envelope icon" style="font-size: 2rem;color: black;"></i></a>
+  </li>
+  <li class="nav-item">
+   <a class="nav-link " href="https://bossinthechair.blogspot.com/"><i class="blogger icon" style="font-size: 2rem;color: black;"></i></a>
+  </li>
+</ul>
