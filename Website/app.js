@@ -39,7 +39,9 @@ app.get("/blogs",function(req, res){
 app.get("/blogs/createNew", function(req, res){
 	res.render("new");
 });
-
+app.get("/about",function(req, res){
+   res.render("about");
+});
 
 app.post("/blogs", function(req, res){
    var title = req.body.title;
