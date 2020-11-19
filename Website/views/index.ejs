@@ -39,7 +39,7 @@
 <% blogs.forEach(function(blogs){ %>
 <div class="card " style="padding: 30px;margin: 30px;">
   <a href="/blogs/<%= blogs._id %>"><h5 class="card-title" style="font-size: 3rem;font-family: 'Staatliches', cursive;text-decoration: none;color: black;"><%= blogs.title %></h5>
-  <span class="text-muted mb-3" style="font-size: 1.25rem;"><%= blogs.date.toDateString() %></span>
+  <span class="text-muted mb-3" style="font-size: 1.25rem;"><%= blogs.date%></span>
   <img src="<%= blogs.coverimage %>" class="card-img-top" alt="...">
   <br>
 <p class="text-muted text-left mt-5"style="font-size: 1.7rem;font-weight: 500;font-family: 'Dancing Script', cursive;"><%= blogs.Description.substring(0,300) %>.................</p>
