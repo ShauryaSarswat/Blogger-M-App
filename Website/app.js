@@ -1,4 +1,5 @@
-var express = require("express");
+var express = require("express");//express ek parser - parser ko render - host taki views load ho jae
+//views - set template jisme tumhara print data 
 var app = express();
 var bodyParser = require("body-parser");
 
